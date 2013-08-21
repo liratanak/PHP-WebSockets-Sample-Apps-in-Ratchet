@@ -1,0 +1,16 @@
+.game-container table {
+	tr td {
+		height: 25px;
+		width: 25px;
+		border: 1px solid #CCC;
+		&:hover {
+			background-color: #CCC;
+		}
+		&.red {
+			background-color: #CC4040
+		}
+		&.blue {
+			background-color: #52527A
+		}
+	}
+}

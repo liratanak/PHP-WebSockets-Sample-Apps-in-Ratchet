@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Foundation 4</title>
+<link rel="stylesheet" href="stylesheets/app.css">
+<script src="javascripts/vendor/custom.modernizr.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="large-12 columns">
+			<h2>Enjoy!</h2>
+			<div class="game-container">
+			</div>
+			<hr />
+		</div>
+	</div>
+	<script type="text/javascript" src="javascripts/vendor/jquery.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.crossgame.js"></script>
+
+	<script>
+		$('.game-container').crossGame();
+
+		connection = new WebSocket('ws://localhost:8080');
+		connection.onopen = function(e) {
+			console.log(e);
+			connection.send('hello');
+		};
+
+	</script>
+</body>
+</html>
